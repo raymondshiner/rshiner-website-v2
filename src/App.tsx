@@ -1,8 +1,9 @@
+import About from "./sections/About/About"
 
-function App() {
+export default function App() {
   return (
     <AppWrapper>
-      <div>Hello World</div>
+      <About />
     </AppWrapper>
   )
 }
@@ -12,7 +13,3 @@ function AppWrapper({ children }: { children: React.ReactNode }) {
     {children}
   </div>
 }
-
-
-
-export default App
