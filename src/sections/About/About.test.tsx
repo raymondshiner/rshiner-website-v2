@@ -6,15 +6,11 @@ describe("About Section", () => {
     render(<About />);
   })
 
-  afterEach(() => {
-    jest.clearAllMocks();
-  })
-
-  it("Should render Title", () => {
+  test("Should render Title", () => {
     screen.getByText("About Me");
   })
 
-  it("Should render a self-portrait", () => {
+  test("Should render a self-portrait", () => {
     const img = screen.getByRole("img", { name: /self-portrait/i });
     expect(img).toBeInTheDocument();
   })
