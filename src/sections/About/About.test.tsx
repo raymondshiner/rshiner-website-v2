@@ -6,16 +6,20 @@ describe("About Section", () => {
     render(<About />);
   })
 
-  test("Should render Title", () => {
+  it("Should render Title", () => {
     screen.getByText("About Me");
   })
 
-  test("Should render a self-portrait", () => {
+  it("Should render a self-portrait", () => {
     const img = screen.getByRole("img", { name: /self-portrait/i });
     expect(img).toBeInTheDocument();
   })
 
-  test("should render description paragraphs", () => {
+  it("should render description paragraphs", () => {
     screen.getByLabelText('description');
+  })
+
+  it("contains collaborate button", () => {
+    screen.getByRole("button", { name: /collaborate/i });
   })
 });

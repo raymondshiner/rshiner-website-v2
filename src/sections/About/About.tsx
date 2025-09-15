@@ -1,8 +1,11 @@
+import { Button } from "@/components/ui/button"
+
 export default function About() {
   return <MainWrapper>
     <Title />
     <SelfPortrait />
     <Description />
+    <Button>Collaborate</Button>
   </MainWrapper>
 }
 
@@ -34,3 +37,4 @@ function Description() {
     With a background in both development and management, I bring a unique perspective to every project I undertake.
   </p>
 }
+
