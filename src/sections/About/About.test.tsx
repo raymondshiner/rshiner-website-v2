@@ -14,4 +14,8 @@ describe("About Section", () => {
     const img = screen.getByRole("img", { name: /self-portrait/i });
     expect(img).toBeInTheDocument();
   })
+
+  test("should render description paragraphs", () => {
+    screen.getByLabelText('description');
+  })
 });
