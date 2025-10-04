@@ -1,16 +1,20 @@
 import { Button } from "@/components/ui/button"
 
-export default function About() {
+interface AboutProps {
+  onCollaborateClick?: () => void
+}
+
+export default function About({ onCollaborateClick }: AboutProps) {
   return <MainWrapper>
     <Title />
     <SelfPortrait />
     <Description />
-    <Button>Collaborate</Button>
+    <Button onClick={onCollaborateClick}>Collaborate</Button>
   </MainWrapper>
 }
 
 function MainWrapper({ children }: { children: React.ReactNode }) {
-  return <div className="container mx-auto p-4 flex flex-col justify-center items-center h-full gap-8">
+  return <div className="container mx-auto p-4 pt-20 flex flex-col justify-center items-center min-h-screen gap-8">
     {children}
   </div>
 }
