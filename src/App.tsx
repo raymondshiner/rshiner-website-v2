@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Button } from "./components/ui/button"
-import About from "./sections/About/About"
+import Home from "./sections/Home/Home"
 import Collaborate from "./sections/Collaborate/Collaborate"
 import Customize from "./sections/Customize/Customize"
 import Projects from "./sections/Projects/Projects"
@@ -19,7 +19,7 @@ const colorThemes = [
 ]
 
 export default function App() {
-  const [currentSection, setCurrentSection] = useState<'about' | 'projects' | 'collaborate' | 'customize'>('about')
+  const [currentSection, setCurrentSection] = useState<'home' | 'projects' | 'collaborate' | 'customize'>('home')
 
   // Load saved theme on app startup
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function App() {
   return (
     <AppWrapper>
       <Navigation currentSection={currentSection} setCurrentSection={setCurrentSection} />
-      {currentSection === 'about' && <About onCollaborateClick={() => setCurrentSection('collaborate')} />}
+      {currentSection === 'home' && <Home onCollaborateClick={() => setCurrentSection('collaborate')} onViewWorkClick={() => setCurrentSection('projects')} />}
       {currentSection === 'projects' && <Projects />}
       {currentSection === 'collaborate' && <Collaborate />}
       {currentSection === 'customize' && <Customize />}
@@ -45,18 +45,18 @@ export default function App() {
 }
 
 function Navigation({ currentSection, setCurrentSection }: {
-  currentSection: 'about' | 'projects' | 'collaborate' | 'customize'
-  setCurrentSection: (section: 'about' | 'projects' | 'collaborate' | 'customize') => void
+  currentSection: 'home' | 'projects' | 'collaborate' | 'customize'
+  setCurrentSection: (section: 'home' | 'projects' | 'collaborate' | 'customize') => void
 }) {
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-10 bg-background/80 backdrop-blur-sm border rounded-full px-6 py-2">
       <div className="flex gap-4">
         <Button
-          variant={currentSection === 'about' ? 'default' : 'ghost'}
+          variant={currentSection === 'home' ? 'default' : 'ghost'}
           size="sm"
-          onClick={() => setCurrentSection('about')}
+          onClick={() => setCurrentSection('home')}
         >
-          About
+          Home
         </Button>
         <Button
           variant={currentSection === 'projects' ? 'default' : 'ghost'}
