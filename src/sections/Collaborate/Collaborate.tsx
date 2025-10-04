@@ -22,7 +22,7 @@ function MainWrapper({ children }: { children: React.ReactNode }) {
 
 function Title() {
   return (
-    <div className="text-5xl font-bold underline text-primary">
+    <div className="text-5xl font-bold border-b-4 border-primary pb-2">
       Let's Collaborate
     </div>
   )
