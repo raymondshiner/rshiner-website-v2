@@ -20,7 +20,7 @@ function MainWrapper({ children }: { children: React.ReactNode }) {
 }
 
 function Title() {
-  return <div className="text-5xl font-bold underline">
+  return <div className="text-5xl font-bold underline text-primary">
     About Me
   </div>
 }
