@@ -92,8 +92,8 @@ function Description() {
         Hello! I'm a passionate developer with a love for creating <span className="text-primary font-semibold">strong systems</span> and <span className="text-primary font-semibold">innovative solutions</span>.
       </p>
       <p className="text-lg text-muted-foreground leading-relaxed">
-        With a background in both development and management, I bring a unique perspective to every project I undertake. 
-        I specialize in building scalable applications, optimizing performance, and leading technical teams to deliver 
+        With a background in both development and management, I bring a unique perspective to every project I undertake.
+        I specialize in building scalable applications, optimizing performance, and leading technical teams to deliver
         exceptional results.
       </p>
     </div>
@@ -145,7 +145,7 @@ function SkillsSection() {
           Technologies and tools I use to bring ideas to life
         </p>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {skills.map((skill, index) => (
           <SkillCard key={index} skill={skill} />
@@ -157,7 +157,7 @@ function SkillsSection() {
 
 function SkillCard({ skill }: { skill: Skill }) {
   const Icon = skill.icon
-  
+
   return (
     <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
       <CardHeader className="text-center">
@@ -215,7 +215,7 @@ function ExperienceSection() {
           My professional journey in software development
         </p>
       </div>
-      
+
       <div className="space-y-8">
         {experiences.map((exp, index) => (
           <ExperienceCard key={index} experience={exp} />
@@ -279,7 +279,7 @@ function ValuesSection() {
           The principles that guide my work and approach to development
         </p>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {values.map((value, index) => (
           <ValueCard key={index} value={value} />
@@ -291,7 +291,7 @@ function ValuesSection() {
 
 function ValueCard({ value }: { value: Value }) {
   const Icon = value.icon
-  
+
   return (
     <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
       <CardHeader>

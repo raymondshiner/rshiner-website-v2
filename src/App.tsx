@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { Button } from "./components/ui/button"
-import Home from "./sections/Home/Home"
 import Collaborate from "./sections/Collaborate/Collaborate"
 import Customize from "./sections/Customize/Customize"
+import Home from "./sections/Home/Home"
 import Projects from "./sections/Projects/Projects"
 
 // Color themes definition (same as in Customize component)

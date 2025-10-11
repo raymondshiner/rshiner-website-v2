@@ -80,7 +80,7 @@ const colorThemes: ColorTheme[] = [
 export default function Customize() {
   const [selectedTheme, setSelectedTheme] = useState<string>(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('selectedTheme') || 'White'
+      return localStorage.getItem('selectedTheme') || 'Blue'
     }
     return 'White'
   })
