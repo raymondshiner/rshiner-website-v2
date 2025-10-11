@@ -23,7 +23,7 @@ export default function App() {
 
   // Load saved theme on app startup
   useEffect(() => {
-    const savedTheme = localStorage.getItem('selectedTheme') || 'White'
+    const savedTheme = localStorage.getItem('selectedTheme') || 'Blue'
     const theme = colorThemes.find(t => t.name === savedTheme)
     if (theme) {
       const root = document.documentElement
