@@ -40,7 +40,7 @@ export default function Home({ onCollaborateClick, onViewWorkClick }: HomeProps)
 
 function MainWrapper({ children }: { children: React.ReactNode }) {
   return (
-    <div className="container mx-auto p-4 pt-20 space-y-20 min-h-screen">
+    <div className="container mx-auto px-[12.5%] py-4 pt-20 space-y-20 min-h-screen">
       {children}
     </div>
   )
@@ -60,7 +60,7 @@ function HeroSection({ onCollaborateClick, onViewWorkClick }: { onCollaborateCli
 function Title() {
   return (
     <div className="space-y-4">
-      <h1 className="text-6xl md:text-7xl font-bold border-b-4 border-primary pb-4">
+      <h1 className="text-6xl font-bold border-b-4 border-primary pb-4">
         Raymond Shiner
       </h1>
       <p className="text-2xl md:text-3xl text-muted-foreground">

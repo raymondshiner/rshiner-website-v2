@@ -121,7 +121,7 @@ export default function Customize() {
 
 function MainWrapper({ children }: { children: React.ReactNode }) {
   return (
-    <div className="container mx-auto p-4 pt-20 flex flex-col justify-center items-center min-h-screen gap-8">
+    <div className="container mx-auto px-[12.5%] py-4 pt-20 flex flex-col justify-center items-center min-h-screen gap-8">
       {children}
     </div>
   )
@@ -129,8 +129,10 @@ function MainWrapper({ children }: { children: React.ReactNode }) {
 
 function Title() {
   return (
-    <div className="text-5xl font-bold border-b-4 border-primary pb-2">
-      Customize
+    <div className="text-center">
+      <h2 className="text-4xl font-bold border-b-4 border-primary pb-2 inline-block">
+        Customize
+      </h2>
     </div>
   )
 }
